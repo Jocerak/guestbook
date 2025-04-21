@@ -1,7 +1,7 @@
 <?php
 echo "Bienvenue dans le Guestbook !";
-echo "Déclancement automatique de jenkins après push"; 
-echo "test , build , deploiment effectuer !";
-echo "CCP2 done!";
+ "Déclancement automatique de jenkins après push"
+ "test , build , deploiment effectuer !"
+ "CCP2 done!";
 
 ?>
