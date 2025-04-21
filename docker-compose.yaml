@@ -1,0 +1,26 @@
+version: '3.8'
+services:
+  web:
+    image: php:8.2-apache
+    container_name: guestbook_web
+    volumes:
+      - ./app:/var/www/html
+    ports:
+      - "8080:80"
+    depends_on:
+      - db
+
+  db:
+    image: mariadb:10.5
+    container_name: guestbook_db
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpass
+      MYSQL_DATABASE: guestbook
+      MYSQL_USER: user
+      MYSQL_PASSWORD: userpass
+    volumes:
+      - db_data:/var/lib/mysql
+
+volumes:
+  db_data:
